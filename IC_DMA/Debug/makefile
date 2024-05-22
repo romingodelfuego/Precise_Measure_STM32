@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (11.3.rel1)
+# Toolchain: GNU Tools for STM32 (12.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -34,34 +34,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := com_Gnss
+BUILD_ARTIFACT_NAME := IC_DMA
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-com_Gnss.elf \
+IC_DMA.elf \
 
 MAP_FILES += \
-com_Gnss.map \
+IC_DMA.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-com_Gnss.list \
+IC_DMA.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: com_Gnss.elf secondary-outputs
+main-build: IC_DMA.elf secondary-outputs
 
 # Tool invocations
-com_Gnss.elf com_Gnss.map: $(OBJS) $(USER_OBJS) C:\Users\romain.pace\STM32CubeIDE\workspace_1.13.2\com_Gnss\STM32H7A3ZITXQ_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "com_Gnss.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\romain.pace\STM32CubeIDE\workspace_1.13.2\com_Gnss\STM32H7A3ZITXQ_FLASH.ld" --specs=nosys.specs -Wl,-Map="com_Gnss.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+IC_DMA.elf IC_DMA.map: $(OBJS) $(USER_OBJS) C:\Users\romain.pace\Desktop\GNSS_Sync\Precise_Measure_STM32.git\IC_DMA\STM32H7A3ZITXQ_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "IC_DMA.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\romain.pace\Desktop\GNSS_Sync\Precise_Measure_STM32.git\IC_DMA\STM32H7A3ZITXQ_FLASH.ld" --specs=nosys.specs -Wl,-Map="IC_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -70,14 +70,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-com_Gnss.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "com_Gnss.list"
+IC_DMA.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "IC_DMA.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) com_Gnss.elf com_Gnss.list com_Gnss.map default.size.stdout
+	-$(RM) IC_DMA.elf IC_DMA.list IC_DMA.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
